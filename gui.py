@@ -7,10 +7,13 @@ import os
 from click import open_file
 
 root=tk.Tk()
+apps=[]
 
 def addApp():
     filename=filedialog.askopenfilename(initialdir="/", title="Select File" , 
     filetypes=(("executable", "*.exe"),("all files","*.*")))
+    apps.append(filename)
+    print(filename)
 
 canvas=tk.Canvas(root, height=500, width=700, bg="#263D42")
 canvas.pack()
