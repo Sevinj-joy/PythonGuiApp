@@ -14,6 +14,14 @@ def addApp():
     filetypes=(("executable", "*.exe"),("all files","*.*")))
     apps.append(filename)
     print(filename)
+    for app in apps:
+        label = tk.Label(frame, text=app, bg="gray")
+        label.pack()
+
+def runApp():
+   for app in apps:
+       os.startfile(app)
+
 
 canvas=tk.Canvas(root, height=500, width=700, bg="#263D42")
 canvas.pack()
@@ -26,7 +34,7 @@ openFile=tk.Button(root, text="Open File", padx=10,
 openFile.pack(side="top")
 
 runApps=tk.Button(root, text="Run Apps", padx=10,
-                 pady=5, fg="white", bg="#263D42")
+                 pady=5, fg="white", bg="#263D42",command = runApp)
 runApps.pack(side="top")
 
 
