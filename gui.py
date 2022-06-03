@@ -11,7 +11,7 @@ apps=[]
 
 if os.path.isfile('save.txt'):
     with open('save.txt','r') as f:
-        tempApps =f.read()
+        tempApps = f.read()
         apps=tempApps.split(',')
         print(apps)
 
@@ -29,7 +29,7 @@ def runApp():
        os.startfile(app)
 
 
-canvas=tk.Canvas(root, height=500, width=700, bg="#263D42")
+canvas=tk.Canvas(root, height=500, width=700, bg="#FFAEBC")
 canvas.pack()
 
 frame =tk.Frame(root, bg="white")

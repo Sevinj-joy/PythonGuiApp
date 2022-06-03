@@ -1,0 +1,1 @@
+C:/sqlite/sqlite3_analyzer.exe,C:/SWSetup/sp135667/Setup.exe,
