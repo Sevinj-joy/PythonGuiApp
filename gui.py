@@ -9,6 +9,12 @@ from click import open_file
 root=tk.Tk()
 apps=[]
 
+if os.path.isfile('save.txt'):
+    with open('save.txt','r') as f:
+        tempApps =f.read()
+        apps=tempApps.split(',')
+        print(apps)
+
 def addApp():
     filename=filedialog.askopenfilename(initialdir="/", title="Select File" , 
     filetypes=(("executable", "*.exe"),("all files","*.*")))
